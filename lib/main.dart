@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/home_page.dart';
+import 'package:mooz_test/screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ListUsersScreen(),
+      home: HomePage(),
     );
   }
 }

@@ -3,14 +3,14 @@ import 'package:mooz_test/widgets/text_field_wid.dart';
 
 import '../widgets/list_user.dart';
 
-class ListUsersScreen extends StatefulWidget {
-  const ListUsersScreen({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<ListUsersScreen> createState() => _ListUsersScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _ListUsersScreenState extends State<ListUsersScreen> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

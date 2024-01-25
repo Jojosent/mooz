@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:mooz_test/screens/home_page.dart';
 
 class AppBarDefault extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   @override
   final Size preferredSize;
+  final bool online;
 
   AppBarDefault({
     Key? key,
     required this.title,
+    this.online = true,
   })  : preferredSize = Size.fromHeight(100.0),
         super(key: key);
 
@@ -17,32 +20,60 @@ class AppBarDefault extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       elevation: 0,
       toolbarHeight: 100,
-      title: Column(
-        children: [
-          SizedBox(
-            height: 45,
-          ),
-          Row(
-            children: [
-              Icon(
+      title: Align(
+        alignment: Alignment.centerLeft,
+        child: Row(
+          mainAxisSize: MainAxisSize.min, // Prevent the Row from expanding
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              },
+              child: Icon(
                 Icons.arrow_back_ios_rounded,
                 size: 19,
-                color: Colors.white,
+                color: Colors.grey,
               ),
-              SizedBox(
-                width: 7,
-              ),
-              Text(
-                title,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
+            ),
+            SizedBox(
+              width: 7,
+            ),
+            Image.asset('img/avatar.png'),
+            SizedBox(
+              width: 7,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ],
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  online ? 'online' : 'offline',
+                  style: const TextStyle(
+                    fontFamily: "Gilroy",
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xff5e7a90),
+                    height: 15 / 12,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
