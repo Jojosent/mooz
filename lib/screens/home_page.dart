@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mooz_test/text_field_wid.dart';
+import 'package:mooz_test/widgets/text_field_wid.dart';
 
-import 'list_user.dart';
+import '../widgets/list_user.dart';
 
 class ListUsersScreen extends StatefulWidget {
   const ListUsersScreen({super.key});
@@ -30,7 +30,7 @@ class _ListUsersScreenState extends State<ListUsersScreen> {
           SizedBox(
             height: 15,
           ),
-          buildChatList()
+          ListUser()
         ],
       ),
     );
