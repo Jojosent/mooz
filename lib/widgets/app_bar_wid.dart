@@ -33,17 +33,17 @@ class AppBarDefault extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 );
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back_ios_rounded,
                 size: 19,
                 color: Colors.grey,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 7,
             ),
             Image.asset('img/avatar.png'),
-            SizedBox(
+            const SizedBox(
               width: 7,
             ),
             Column(
@@ -51,13 +51,13 @@ class AppBarDefault extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Text(

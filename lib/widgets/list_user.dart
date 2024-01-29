@@ -18,18 +18,18 @@ class _ListUserState extends State<ListUser> {
             16,
             (int index) {
               return Container(
-                margin: EdgeInsets.only(left: 15, right: 15),
+                margin: const EdgeInsets.only(left: 15, right: 15),
                 child: Column(
                   children: [
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => MessageScreen(),
+                            builder: (context) => const MessageScreen(),
                           ),
                         );
                       },
-                      child: Row(
+                      child: const Row(
                         children: [
                           Image(
                             image: AssetImage('img/avatar.png'),
@@ -42,7 +42,7 @@ class _ListUserState extends State<ListUser> {
                             children: [
                               Text(
                                 "Виктор Власов",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontFamily: "Gilroy",
                                   fontSize: 15,
                                   fontWeight: FontWeight.w600,
@@ -56,7 +56,7 @@ class _ListUserState extends State<ListUser> {
                               ),
                               Text(
                                 "Я готов",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontFamily: "Gilroy",
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
@@ -70,7 +70,7 @@ class _ListUserState extends State<ListUser> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Container(
@@ -78,7 +78,7 @@ class _ListUserState extends State<ListUser> {
                       width: double.maxFinite,
                       color: Colors.grey.withOpacity(0.2),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                   ],

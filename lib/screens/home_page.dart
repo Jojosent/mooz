@@ -16,10 +16,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         children: [
-          TextFieldWid(
+          const TextFieldWid(
             title: 'Чаты',
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Container(
@@ -27,10 +27,10 @@ class _HomePageState extends State<HomePage> {
             width: double.maxFinite,
             color: Colors.grey.withOpacity(0.2),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
-          ListUser()
+          const ListUser()
         ],
       ),
     );

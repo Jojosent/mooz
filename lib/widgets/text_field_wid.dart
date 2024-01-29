@@ -12,7 +12,7 @@ class _TextFieldWidState extends State<TextFieldWid> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 15, right: 15, top: 50),
+      margin: const EdgeInsets.only(left: 15, right: 15, top: 50),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -27,16 +27,16 @@ class _TextFieldWidState extends State<TextFieldWid> {
             ),
             textAlign: TextAlign.center,
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           TextField(
             decoration: InputDecoration(
               hintText: 'Поиск',
-              prefixIcon: Icon(Icons.search, color: Colors.grey),
+              prefixIcon: const Icon(Icons.search, color: Colors.grey),
               filled: true,
               fillColor: Colors.blue.withOpacity(0.1),
-              contentPadding: EdgeInsets.all(8),
+              contentPadding: const EdgeInsets.all(8),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12.0),
                 borderSide: BorderSide.none,
